@@ -1,11 +1,11 @@
 import { Amplify } from 'aws-amplify'
 
 export const cognitoConfig = {
-  userPoolId: 'us-east-2_L98CD0jvt',
+  userPoolId: 'us-east-2_igVOcgTqM',
 
-  userPoolClientId: 'isvpse9a2mjimdp56pimmc0ht',
+  userPoolClientId: '6392ho0tqrcnpha3pbd5ielnj3',
 
-  domain: 'us-east-2l98cd0jvt.auth.us-east-2.amazoncognito.com',
+  domain: 'us-east-2igvocgtqm.auth.us-east-2.amazoncognito.com',
 
   redirectSignIn: [
     'https://d1ohz7nks4rtag.cloudfront.net/',
