@@ -38,7 +38,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6.3.0
         with:
           role-to-assume: arn:aws:iam::565855172450:role/github-actions-frontend-role
-          aws-region: us-east-2
+          aws-region: ap-southeast-1
 
       # 6. Upload the React build to your private S3 bucket
       - name: Deploy to S3
