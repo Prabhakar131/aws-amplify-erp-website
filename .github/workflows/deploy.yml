@@ -1,0 +1,45 @@
+name: Deploy ERP Frontend
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Download your repository onto the GitHub runner
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      # 2. Install Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      # 3. Install your React dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Build your React application
+      - name: Build React app
+        run: npm run build
+
+      # 5. Login to AWS using GitHub OIDC
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6.3.0
+        with:
+          role-to-assume: arn:aws:iam::565855172450:role/github-actions-frontend-role
+          aws-region: us-east-2
+
+      # 6. Upload the React build to your private S3 bucket
+      - name: Deploy to S3
+        run: aws s3 sync dist/ s3://prabhakar-testing --delete
