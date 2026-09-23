@@ -8,12 +8,12 @@ export const cognitoConfig = {
   domain: 'us-east-2l98cd0jvt.auth.us-east-2.amazoncognito.com',
 
   redirectSignIn: [
-    'https://dev.d2i50h8z2loa7g.amplifyapp.com',
+    'https://d1ohz7nks4rtag.cloudfront.net/',
     'http://localhost:5173/',
   ],
 
   redirectSignOut: [
-    'https://dev.d2i50h8z2loa7g.amplifyapp.com',
+    'https://d1ohz7nks4rtag.cloudfront.net/',
     'http://localhost:5173/',
   ],
 }
