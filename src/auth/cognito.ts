@@ -1,19 +1,19 @@
 import { Amplify } from 'aws-amplify'
 
 export const cognitoConfig = {
-  userPoolId: 'us-east-2_MOvmTpvJK',
+  userPoolId: 'us-east-2_L98CD0jvt',
 
-  userPoolClientId: '2hgt75ja3jdfahljtqj12nq0hm',
+  userPoolClientId: 'isvpse9a2mjimdp56pimmc0ht',
 
-  domain: 'us-east-2movmtpvjk.auth.us-east-2.amazoncognito.com',
+  domain: 'us-east-2l98cd0jvt.auth.us-east-2.amazoncognito.com',
 
   redirectSignIn: [
-    'https://dev.d2i50h8z2loa7g.amplifyapp.com/',
+    'https://dev.d2i50h8z2loa7g.amplifyapp.com',
     'http://localhost:5173/',
   ],
 
   redirectSignOut: [
-    'https://dev.d2i50h8z2loa7g.amplifyapp.com/',
+    'https://dev.d2i50h8z2loa7g.amplifyapp.com',
     'http://localhost:5173/',
   ],
 }
