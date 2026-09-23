@@ -18,6 +18,11 @@ export const cognitoConfig = {
   ],
 }
 
+export const isCognitoConfigured =
+  !cognitoConfig.userPoolId.includes('REPLACE_ME') &&
+  !cognitoConfig.userPoolClientId.includes('REPLACE') &&
+  !cognitoConfig.domain.includes('REPLACE_ME')
+
 Amplify.configure({
   Auth: {
     Cognito: {
